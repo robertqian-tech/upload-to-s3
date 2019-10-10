@@ -1,4 +1,4 @@
-# upload-to-s3
+# upload to S3
 Demonstrate how to upload pictures from browser to Amazon S3 directly. It can preview pictures on the browser.
 
 # Dependency:
