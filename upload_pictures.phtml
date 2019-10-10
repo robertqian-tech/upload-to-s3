@@ -1,0 +1,43 @@
+<link href="jquery-ui.min.css" rel="stylesheet" type="text/css">
+
+<div id="addCaptionModal" class="reveal-moda radius" data-reveal>
+	<a class="close-reveal-modal close-modal fa fa-times"></a>
+	<span class="title">Picture Description</span>
+	<div id="clonedPreview"></div>
+	<textarea class="margin-top-10" maxlength="200" id="picCaptionTextarea" placeholder='maximum 200 characters'></textarea>
+	<div class="clearfix">
+		<button class="small white close-modal left">Cancel</button>
+		<button class="small submit-btn right">Submit</button>
+	</div>
+</div>
+
+<form id="S3params">
+	<input type="hidden" id="AWSAccessKeyId" name="AWSAccessKeyId" value="<?=$s3AccessKey?>">
+	<input type="hidden" id="acl" name="acl" value="public-read">
+	<input type="hidden" id="policy" name="policy" value="<?=$s3Policy?>">
+	<input type="hidden" id="signature" name="signature" value="<?=$s3Signature?>">
+	<input type="hidden" name="x-amz-storage-class" value="REDUCED_REDUNDANCY">
+	<input type="hidden" id="success_action_status" name="success_action_status" value="201">
+</form>
+
+<script id="template-upload" type="text/x-tmpl">
+	<li class="img-preview template-upload fade">
+		<div class="preview">
+			<input type="hidden" name="pictureNames[]">
+			<input type="hidden" name="pictureCaptions[]">
+			<div class="progress"><span class="meter" style="width: 0%"></span></div>
+			<a class="cancel fa fa-times"></a>
+			<a class="fa fa-pencil"></a>
+		</div>
+	</li>
+</script>
+
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery-ui-touch-punch.js"></script>
+<script type="text/javascript" src="fileupload/load-image.js"></script>
+<script type="text/javascript" src="fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="fileupload/jquery.fileupload-process.js"></script>
+<script type="text/javascript" src="fileupload/jquery.fileupload-image.js"></script>
+<script type="text/javascript" src="fileupload/jquery.fileupload-validate.js"></script>
+<script type="text/javascript" src="fileupload/jquery.fileupload-ui.js"></script>
+<script type="text/javascript" src="upload-pictures.js"></script>

@@ -1,7 +1,7 @@
 # upload-to-s3
-Demonstrate how to upload files from browser to Amazon S3 directly.
+Demonstrate how to upload pictures from browser to Amazon S3 directly. It can preview pictures on the browser.
 
-Dependency:
+# Dependency:
 jquery-ui.js
 query-ui-touch-punch.js
 jquery.fileupload.js
